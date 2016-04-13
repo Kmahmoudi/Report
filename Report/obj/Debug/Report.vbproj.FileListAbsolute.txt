@@ -1,0 +1,23 @@
+C:\Users\Kamran\AppData\Local\Temporary Projects\Report\bin\Debug\Report.exe.config
+D:\On going projects\Report\Report\bin\Debug\Report.exe.config
+D:\On going projects\Report\Report\bin\Debug\Report.exe
+D:\On going projects\Report\Report\bin\Debug\Report.pdb
+D:\On going projects\Report\Report\bin\Debug\Report.xml
+D:\On going projects\Report\Report\obj\Debug\Report.Resources.resources
+D:\On going projects\Report\Report\obj\Debug\Report.vbproj.GenerateResource.Cache
+D:\On going projects\Report\Report\obj\Debug\Report.exe
+D:\On going projects\Report\Report\obj\Debug\Report.xml
+D:\On going projects\Report\Report\obj\Debug\Report.pdb
+D:\On going projects\Report\Report\obj\Debug\Report.Loading.resources
+D:\On going projects\Backup\Report 4\Report\bin\Debug\Report.exe.config
+D:\On going projects\Backup\Report 4\Report\obj\Debug\Report.exe
+D:\On going projects\Backup\Report 4\Report\obj\Debug\Report.xml
+D:\On going projects\Backup\Report 4\Report\obj\Debug\Report.pdb
+D:\On going projects\Backup\Report 4\Report\bin\Debug\Report.exe
+D:\On going projects\Backup\Report 4\Report\bin\Debug\Report.pdb
+D:\On going projects\Backup\Report 4\Report\bin\Debug\Report.xml
+D:\On going projects\Backup\Report 4\Report\obj\Debug\Report.Loading.resources
+D:\On going projects\Backup\Report 4\Report\obj\Debug\Report.ReportMainForm.resources
+D:\On going projects\Backup\Report 4\Report\obj\Debug\Report.Resources.resources
+D:\On going projects\Backup\Report 4\Report\obj\Debug\Report.vbproj.GenerateResource.Cache
+D:\On going projects\Report\Report\obj\Debug\Report.ReportMainForm.resources
