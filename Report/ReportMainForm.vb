@@ -126,19 +126,19 @@ Public Class ReportMainForm
                 For Each file In files
                     Dim infoReader As System.IO.FileInfo
                     infoReader = My.Computer.FileSystem.GetFileInfo(file)
-                    If infoReader.CreationTime.Year >= Val(FileCreationDate.Text) And file.ToLower.Contains(URLFilterTextbox.Text.ToLower) Then
-                        ' folder.Nodes.Add(file)
-                        If file.ToLower.Contains("\text\") Then
-                            textFiles.Add(file)
-                            textcount += 1
-                        ElseIf file.ToLower.Contains("\voice\") Then
-                            voicefiles.Add(file)
-                            voicecount += 1
-                        ElseIf file.ToLower.Contains("\archive\") Then
-                            archivecount += 1
-                            archiveFiles.Add(file)
-                        End If
+                    ''If infoReader.CreationTime.Year >= Val(FileCreationDate.Text) Then
+                    ' folder.Nodes.Add(file)
+                    If file.ToLower.Contains("\text\") Then
+                        textFiles.Add(file)
+                        textcount += 1
+                    ElseIf file.ToLower.Contains("\voice\") Then
+                        voiceFiles.Add(file)
+                        voiceCount += 1
+                    ElseIf file.ToLower.Contains("\archive\") And file.ToLower.Contains(URLFilterTextbox.Text.ToLower) Then
+                        archiveCount += 1
+                        archiveFiles.Add(file)
                     End If
+                    ''  End If
 
                 Next
             Next
@@ -219,6 +219,7 @@ Public Class ReportMainForm
 
     Private Sub ProcessButton_Click(sender As Object, e As EventArgs) Handles ProcessButton.Click
         Loading.Show()
+        ProcessButton.Enabled = False
         hidereportwindow()
         StatusLabel.Text = "تهیه گزارش"
         ReadFileSystem()
@@ -231,6 +232,7 @@ Public Class ReportMainForm
         Dim HTMLFoot As String = "</table></div></div></body></html>"
         Dim LastMasterFolderName As String = ""
         Dim LocalReportText As New TextBox
+        Dim LocalReportTextAbstract As New TextBox
         Dim ThisMasterReport As New TextBox
         Dim RowSpan As Integer = 0
 
@@ -286,10 +288,6 @@ Public Class ReportMainForm
                     End If
                 Next
 
-                If CourseTopic = "" Then
-                    CourseTopic = CourseTitle
-                End If
-
                 Dim theElementCollection As HtmlElementCollection = Nothing
                 theElementCollection = WebBrowser1.Document.GetElementsByTagName("div")
 
@@ -304,10 +302,19 @@ Public Class ReportMainForm
 
                     End If
                 Next
+
+
+                If CourseTopic = "" Then
+                    CourseTopic = CourseTitle
+                End If
+
+
                 If hasCourseHeader = True Then
 
                     If LastMasterFolderName <> MasterFolderName Then
                         LocalReportText.Text = LocalReportText.Text.Replace("$R$", RowSpan.ToString)
+                        LocalReportTextAbstract.Text = LocalReportTextAbstract.Text.Replace("$R$", RowSpan.ToString)
+
                         ThisMasterReport.Text = ThisMasterReport.Text.Replace("$R$", RowSpan.ToString)
                         '    // save master 
                         Dim rpt As New TextBox
@@ -466,10 +473,13 @@ Public Class ReportMainForm
                 End If
                 If RowSpan <= 1 Then
                     LocalReportText.AppendText("<tr><td rowspan=$R$>" + masterID + "</td><td>" + CourseTopic + "</td><td> " + (TedadJalase).ToString + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td><td>" + wordcount.ToString + "</td><td>" + totalPavaraghi.ToString + "</td><td>" + pavaraghiErrorShow + "</td><td>" + shahedmesalerrorshow + "</td>")
+                    LocalReportTextAbstract.AppendText("<tr><td rowspan=$R$>" + masterID + "</td><td>" + CourseTopic + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td>")
+
                     ThisMasterReport.AppendText("<tr><td rowspan=$R$>" + masterID + "</td><td>" + CourseTopic + "</td><td> " + (TedadJalase).ToString + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td><td>" + wordcount.ToString + "</td><td>" + totalPavaraghi.ToString + "</td><td>" + pavaraghiErrorShow + "</td><td>" + shahedmesalerrorshow + "</td>")
 
                 Else
                     LocalReportText.AppendText("<tr><td>" + CourseTopic + "</td><td> " + (TedadJalase).ToString + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td><td>" + wordcount.ToString + "</td><td>" + totalPavaraghi.ToString + "</td><td>" + pavaraghiErrorShow + "</td><td>" + shahedmesalerrorshow + "</td></tr>")
+                    LocalReportTextAbstract.AppendText("<tr><td>" + CourseTopic + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td>")
                     ThisMasterReport.AppendText("<tr><td>" + CourseTopic + "</td><td> " + (TedadJalase).ToString + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td><td>" + wordcount.ToString + "</td><td>" + totalPavaraghi.ToString + "</td><td>" + pavaraghiErrorShow + "</td><td>" + shahedmesalerrorshow + "</td></tr>")
 
                 End If
@@ -545,10 +555,11 @@ Public Class ReportMainForm
                     End If
                 Next
 
-                If CourseTopic = "" Then
-                    CourseTopic = CourseTitle
+                If MasterName = "" Then
+                    MasterName = MasterFolderName
                 End If
 
+                
                 Dim theElementCollection As HtmlElementCollection = Nothing
                 theElementCollection = WebBrowser1.Document.GetElementsByTagName("div")
 
@@ -563,10 +574,16 @@ Public Class ReportMainForm
 
                     End If
                 Next
+
+                If CourseTopic = "" Then
+                    CourseTopic = CourseTitle
+                End If
+
                 If hasCourseHeader = True Then
 
                     If LastMasterFolderName <> MasterFolderName Then
                         LocalReportText.Text = LocalReportText.Text.Replace("$R$", RowSpan.ToString)
+                        LocalReportTextAbstract.Text = LocalReportTextAbstract.Text.Replace("$R$", RowSpan.ToString)
                         ThisMasterReport.Text = ThisMasterReport.Text.Replace("$R$", RowSpan.ToString)
                         '    // save master 
                         Dim rpt As New TextBox
@@ -609,12 +626,29 @@ Public Class ReportMainForm
 
                     Dim pavaraghiErrorFileReport As String = "<html dir=rtl><body><link href='reporttable.css' rel='stylesheet' type='text/css'/><div id='content'><div class='wrap'><div class='reporthead'>زمان تهیه گزارش : " + Now.ToString + "</div><table class='main' width='100%'  border='0'><tr><th>آدرس فایل</th><th>خطا</th><th>پاورقی</th><th>لینک</th><th>بدون شاهد مثال</th></tr>"
 
+
+                    Dim sample As String = Archive
+                    Dim base = sample.Substring(sample.ToLower.IndexOf("archive\") + 8)
+                    Dim years = base.Substring(0, base.LastIndexOf("\"))
+                    years = years.Substring(years.LastIndexOf("\") + 1)
+                    Dim year1 As String = years.Substring(0, 2)
+                    Dim year2 As String = years.Substring(3)
+                    base = base.Substring(0, base.LastIndexOf("\"))
+                    'MsgBox(base)
+                    base = base.Substring(0, base.LastIndexOf("\"))
+                    base = "\" + base + "\"
+                    Dim coursestr1 = base + year1 + "\"
+                    Dim coursestr2 = base + year2 + "\"
+                    ' MsgBox(coursestr1 + vbNewLine + coursestr2)
+
+
+
                     For Each txt As String In textFiles
                         pavaraghi = 0
                         pavaraghiError = 0
                         pavaraghiLinked = 0
 
-                        If txt.ToLower.Contains(CourseDirectory.ToLower) Then
+                        If txt.ToLower.Contains(coursestr1.ToLower) Then
                             txtfilecounts += 1
 
                             If txt.Contains(".htm") Or txt.Contains(".html") Then
@@ -725,10 +759,12 @@ Public Class ReportMainForm
                 End If
                 If RowSpan <= 1 Then
                     LocalReportText.AppendText("<tr><td rowspan=$R$>" + masterID + "</td><td>" + CourseTopic + "</td><td> " + (TedadJalase).ToString + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td><td>" + wordcount.ToString + "</td><td>" + totalPavaraghi.ToString + "</td><td>" + pavaraghiErrorShow + "</td><td>" + shahedmesalerrorshow + "</td>")
+                    LocalReportTextAbstract.AppendText("<tr><td rowspan=$R$>" + masterID + "</td><td>" + CourseTopic + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td>")
                     ThisMasterReport.AppendText("<tr><td rowspan=$R$>" + masterID + "</td><td>" + CourseTopic + "</td><td> " + (TedadJalase).ToString + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td><td>" + wordcount.ToString + "</td><td>" + totalPavaraghi.ToString + "</td><td>" + pavaraghiErrorShow + "</td><td>" + shahedmesalerrorshow + "</td>")
 
                 Else
                     LocalReportText.AppendText("<tr><td>" + CourseTopic + "</td><td> " + (TedadJalase).ToString + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td><td>" + wordcount.ToString + "</td><td>" + totalPavaraghi.ToString + "</td><td>" + pavaraghiErrorShow + "</td><td>" + shahedmesalerrorshow + "</td></tr>")
+                    LocalReportTextAbstract.AppendText("<tr><td>" + CourseTopic + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td>")
                     ThisMasterReport.AppendText("<tr><td>" + CourseTopic + "</td><td> " + (TedadJalase).ToString + "</td><td>" + vcfilecount.ToString + "</td><td>" + txtfilecounts.ToString + "</td><td>" + wordcount.ToString + "</td><td>" + totalPavaraghi.ToString + "</td><td>" + pavaraghiErrorShow + "</td><td>" + shahedmesalerrorshow + "</td></tr>")
 
                 End If
@@ -780,6 +816,7 @@ Public Class ReportMainForm
 
         Next
         LocalReportText.Text = LocalReportText.Text.Replace("$R$", RowSpan.ToString)
+        LocalReportTextAbstract.Text = LocalReportTextAbstract.Text.Replace("$R$", RowSpan.ToString)
         ThisMasterReport.Text = ThisMasterReport.Text.Replace("$R$", RowSpan.ToString)
 
         Dim report As New TextBox
@@ -787,7 +824,15 @@ Public Class ReportMainForm
         report.AppendText(Report2TableHead)
         report.AppendText(LocalReportText.Text)
         report.AppendText(HTMLFoot)
-        Dim repfilename = ReportPath + URLFilterTextbox.Text + Now.Year.ToString + Now.Month.ToString + Now.Day.ToString + ".html"
+
+        Dim abstractReport As New TextBox
+        abstractReport.AppendText(HTMLHead)
+        abstractReport.AppendText(Report1TableHead)
+        abstractReport.AppendText(LocalReportTextAbstract.text)
+        abstractReport.AppendText(HTMLFoot)
+
+        Dim repfilename = ReportPath + URLFilterTextbox.Text + "_Detailed_" + Now.Year.ToString + Now.Month.ToString + Now.Day.ToString + ".html"
+
         If Not File.Exists(repfilename) Then
             Using sw As New StreamWriter(repfilename, True, System.Text.Encoding.UTF8)
                 sw.Write(report.Text)
@@ -798,13 +843,32 @@ Public Class ReportMainForm
                 sw.Write(report.Text)
             End Using
         End If
-        If My.Computer.FileSystem.FileExists(ReportPath + "reporttable.css") = False Then
-            My.Computer.FileSystem.CopyFile(CurDir() + "\reporttable.css", ReportPath + "reporttable.css")
+
+        repfilename = ReportPath + URLFilterTextbox.Text + "_Abstract_" + Now.Year.ToString + Now.Month.ToString + Now.Day.ToString + ".html"
+
+        If Not File.Exists(repfilename) Then
+            Using sw As New StreamWriter(repfilename, True, System.Text.Encoding.UTF8)
+                sw.Write(abstractReport.Text)
+            End Using
+        Else
+            My.Computer.FileSystem.DeleteFile(repfilename)
+            Using sw As New StreamWriter(repfilename, True, System.Text.Encoding.UTF8)
+                sw.Write(abstractReport.Text)
+            End Using
         End If
 
-        WebBrowser1.Navigate(repfilename)
-        showreportwindow()
+
+            If My.Computer.FileSystem.FileExists(ReportPath + "reporttable.css") = False Then
+                My.Computer.FileSystem.CopyFile(CurDir() + "\reporttable.css", ReportPath + "reporttable.css")
+            End If
+
+            WebBrowser1.Navigate(repfilename)
+            showreportwindow()
         ProgressBar1.Value = 0
+
+        ProcessButton.Enabled = True
+
+
     End Sub
 
 

@@ -21,3 +21,14 @@ D:\On going projects\Backup\Report 4\Report\obj\Debug\Report.ReportMainForm.reso
 D:\On going projects\Backup\Report 4\Report\obj\Debug\Report.Resources.resources
 D:\On going projects\Backup\Report 4\Report\obj\Debug\Report.vbproj.GenerateResource.Cache
 D:\On going projects\Report\Report\obj\Debug\Report.ReportMainForm.resources
+D:\Github\Report\Report\bin\Debug\Report.exe.config
+D:\Github\Report\Report\obj\Debug\Report.exe
+D:\Github\Report\Report\obj\Debug\Report.xml
+D:\Github\Report\Report\obj\Debug\Report.pdb
+D:\Github\Report\Report\obj\Debug\Report.Loading.resources
+D:\Github\Report\Report\obj\Debug\Report.ReportMainForm.resources
+D:\Github\Report\Report\obj\Debug\Report.Resources.resources
+D:\Github\Report\Report\obj\Debug\Report.vbproj.GenerateResource.Cache
+D:\Github\Report\Report\bin\Debug\Report.exe
+D:\Github\Report\Report\bin\Debug\Report.pdb
+D:\Github\Report\Report\bin\Debug\Report.xml
