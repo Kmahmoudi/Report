@@ -19,6 +19,10 @@ Report
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Report.My.Resources.Resources.db">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Report.My.Resources.Resources.forward">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

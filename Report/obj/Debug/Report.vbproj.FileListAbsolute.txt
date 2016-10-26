@@ -32,3 +32,74 @@ D:\Github\Report\Report\obj\Debug\Report.vbproj.GenerateResource.Cache
 D:\Github\Report\Report\bin\Debug\Report.exe
 D:\Github\Report\Report\bin\Debug\Report.pdb
 D:\Github\Report\Report\bin\Debug\Report.xml
+D:\Github\Report\Report\obj\Debug\Report.DocReport.resources
+D:\Github\Report\Report\obj\Debug\Report.Chart.resources
+D:\Github\Report - Copy\Report\bin\Debug\Report.exe.config
+D:\Github\Report - Copy\Report\obj\Debug\Report.exe
+D:\Github\Report - Copy\Report\obj\Debug\Report.xml
+D:\Github\Report - Copy\Report\obj\Debug\Report.pdb
+D:\Github\Report - Copy\Report\bin\Debug\Report.exe
+D:\Github\Report - Copy\Report\bin\Debug\Report.pdb
+D:\Github\Report - Copy\Report\bin\Debug\Report.xml
+D:\Github\Report - Copy\Report\obj\Debug\Report.Chart.resources
+D:\Github\Report - Copy\Report\obj\Debug\Report.DocReport.resources
+D:\Github\Report - Copy\Report\obj\Debug\Report.Loading.resources
+D:\Github\Report - Copy\Report\obj\Debug\Report.ReportMainForm.resources
+D:\Github\Report - Copy\Report\obj\Debug\Report.Resources.resources
+D:\Github\Report - Copy\Report\obj\Debug\Report.vbproj.GenerateResource.Cache
+D:\Github\Report - new\Report\bin\Debug\Report.exe.config
+D:\Github\Report - new\Report\obj\Debug\Report.exe
+D:\Github\Report - new\Report\obj\Debug\Report.xml
+D:\Github\Report - new\Report\obj\Debug\Report.pdb
+D:\Github\Report - new\Report\bin\Debug\Report.exe
+D:\Github\Report - new\Report\bin\Debug\Report.pdb
+D:\Github\Report - new\Report\bin\Debug\Report.xml
+D:\Github\Report - new\Report\obj\Debug\Report.Chart.resources
+D:\Github\Report - new\Report\obj\Debug\Report.DocReport.resources
+D:\Github\Report - new\Report\obj\Debug\Report.Loading.resources
+D:\Github\Report - new\Report\obj\Debug\Report.ReportMainForm.resources
+D:\Github\Report - new\Report\obj\Debug\Report.Resources.resources
+D:\Github\Report - new\Report\obj\Debug\Report.vbproj.GenerateResource.Cache
+D:\Github\Report - new - 2\Report\bin\Debug\Report.exe.config
+D:\Github\Report - new - 2\Report\obj\Debug\Report.exe
+D:\Github\Report - new - 2\Report\obj\Debug\Report.xml
+D:\Github\Report - new - 2\Report\obj\Debug\Report.pdb
+D:\Github\Report - new - 2\Report\bin\Debug\Report.exe
+D:\Github\Report - new - 2\Report\bin\Debug\Report.pdb
+D:\Github\Report - new - 2\Report\bin\Debug\Report.xml
+D:\Github\Report - new - 2\Report\obj\Debug\Report.Chart.resources
+D:\Github\Report - new - 2\Report\obj\Debug\Report.DocReport.resources
+D:\Github\Report - new - 2\Report\obj\Debug\Report.Loading.resources
+D:\Github\Report - new - 2\Report\obj\Debug\Report.ReportMainForm.resources
+D:\Github\Report - new - 2\Report\obj\Debug\Report.Resources.resources
+D:\Github\Report - new - 2\Report\obj\Debug\Report.vbproj.GenerateResource.Cache
+D:\Github\Report - new - 2\Report\obj\Debug\Report.TextFileTypeErrors.resources
+D:\Github\Report 950613\Report\bin\Debug\Report.exe.config
+D:\Github\Report 950613\Report\obj\Debug\Report.exe
+D:\Github\Report 950613\Report\obj\Debug\Report.xml
+D:\Github\Report 950613\Report\obj\Debug\Report.pdb
+D:\Github\Report 950613\Report\bin\Debug\Report.exe
+D:\Github\Report 950613\Report\bin\Debug\Report.pdb
+D:\Github\Report 950613\Report\bin\Debug\Report.xml
+D:\Github\Report 950613\Report\obj\Debug\Report.Chart.resources
+D:\Github\Report 950613\Report\obj\Debug\Report.DocReport.resources
+D:\Github\Report 950613\Report\obj\Debug\Report.Loading.resources
+D:\Github\Report 950613\Report\obj\Debug\Report.ReportMainForm.resources
+D:\Github\Report 950613\Report\obj\Debug\Report.Resources.resources
+D:\Github\Report 950613\Report\obj\Debug\Report.TextFileTypeErrors.resources
+D:\Github\Report 950613\Report\obj\Debug\Report.vbproj.GenerateResource.Cache
+D:\Github\Report 950620\Report\bin\Debug\Report.exe.config
+D:\Github\Report 950620\Report\obj\Debug\Report.exe
+D:\Github\Report 950620\Report\obj\Debug\Report.xml
+D:\Github\Report 950620\Report\obj\Debug\Report.pdb
+D:\Github\Report 950620\Report\bin\Debug\Report.exe
+D:\Github\Report 950620\Report\bin\Debug\Report.pdb
+D:\Github\Report 950620\Report\bin\Debug\Report.xml
+D:\Github\Report 950620\Report\obj\Debug\Report.Chart.resources
+D:\Github\Report 950620\Report\obj\Debug\Report.DocReport.resources
+D:\Github\Report 950620\Report\obj\Debug\Report.Loading.resources
+D:\Github\Report 950620\Report\obj\Debug\Report.ReportMainForm.resources
+D:\Github\Report 950620\Report\obj\Debug\Report.Resources.resources
+D:\Github\Report 950620\Report\obj\Debug\Report.TextFileTypeErrors.resources
+D:\Github\Report 950620\Report\obj\Debug\Report.vbproj.GenerateResource.Cache
+D:\Github\Report\Report\obj\Debug\Report.TextFileTypeErrors.resources

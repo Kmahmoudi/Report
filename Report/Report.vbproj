@@ -51,6 +51,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -70,6 +71,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chart.Designer.vb">
+      <DependentUpon>Chart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Chart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="databaseModule.vb" />
+    <Compile Include="DateConvertModule.vb" />
+    <Compile Include="DocReport.Designer.vb">
+      <DependentUpon>DocReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DocReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Loading.Designer.vb">
       <DependentUpon>Loading.vb</DependentUpon>
     </Compile>
@@ -98,8 +113,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TextFileTypeErrors.Designer.vb">
+      <DependentUpon>TextFileTypeErrors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TextFileTypeErrors.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Chart.resx">
+      <DependentUpon>Chart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocReport.resx">
+      <DependentUpon>DocReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.vb</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +138,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextFileTypeErrors.resx">
+      <DependentUpon>TextFileTypeErrors.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\images\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\db.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

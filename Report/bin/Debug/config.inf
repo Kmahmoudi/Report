@@ -1,7 +1,10 @@
 #PATH
-D:\data
+D:\BaharSound
 #REPORTPATH
 D:\REPORT\
-#FILECREATIONDATE
-2000
-#STRINGFILTER
+#CONNECTIONSTRING
+Data Source=(local);initial catalog=dbReport;integrated security=true
+#ArabicCurrentYear
+38-37
+#PersianCurrentYear
+jari

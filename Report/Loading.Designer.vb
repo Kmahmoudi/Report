@@ -30,7 +30,7 @@ Partial Class Loading
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Report.My.Resources.Resources.loading2
-        Me.PictureBox1.Location = New System.Drawing.Point(35, 16)
+        Me.PictureBox1.Location = New System.Drawing.Point(69, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(71, 71)
         Me.PictureBox1.TabIndex = 0
@@ -39,7 +39,7 @@ Partial Class Loading
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(30, 101)
+        Me.Label1.Location = New System.Drawing.Point(63, 98)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 13)
         Me.Label1.TabIndex = 1
@@ -50,10 +50,10 @@ Partial Class Loading
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(135, 128)
-        Me.ControlBox = False
+        Me.ClientSize = New System.Drawing.Size(206, 133)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.MaximizeBox = False
         Me.Name = "Loading"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Loading ..."
